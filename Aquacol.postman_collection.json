@@ -1,0 +1,283 @@
+{
+	"info": {
+		"_postman_id": "c13e984b-102e-4136-9b07-56d8b8cc4f84",
+		"name": "Aquacol",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26322809"
+	},
+	"item": [
+		{
+			"name": "Token",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "username",
+						"value": "admin",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "password",
+						"value": "secret",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"admin\",\r\n    \"password\":\"secret\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8009/auth/token",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8009",
+					"path": [
+						"auth",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Prueba",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwiZXhwIjoxNjgxMjEyMDk3fQ.QLDv1pXRWxwDF2FEeCArLpTv59kocnqnQMrAf8fEn4w",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8009/prueba",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8009",
+					"path": [
+						"prueba"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Insts",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwiZXhwIjoxNjgxMjAxMzgyfQ.inuWNC5-vmQQjtUTFU0tARNoN582ZkuGyBH1FH_kwVw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8009/insts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8009",
+					"path": [
+						"insts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Put ft_inst",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"ft_ins1_inst\": 1,\r\n    \"ft_ins1_timestamp\": 1,\r\n    \"ft_ins1_t1\": 1.0,\r\n    \"ft_ins1_t2\": 1.0,\r\n    \"ft_ins1_ph\": 1.0,\r\n    \"ft_ins1_o2\": 1.0,\r\n    \"ft_ins1_ec\": 1.0,\r\n    \"ft_ins1_ta1\": 1.0,\r\n    \"ft_ins1_ha1\": 1.0,\r\n    \"ft_ins1_ta2\": 1.0,\r\n    \"ft_ins1_ha2\": 1.0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8009/ft_inst1/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8009",
+					"path": [
+						"ft_inst1",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post Inst",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"ins_fea_name\":\"Instalacion de prueba\",\r\n    \"ins_fea_desc\": \"Detalles de prueba\",\r\n    \"ins_fea_lat\": 6.6,\r\n    \"ins_fea_lon\": 5.6,\r\n    \"ins_fea_own\": \"ES Prueba\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8009/insts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8009",
+					"path": [
+						"insts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post ft_inst",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"ft_ins3_inst\": 3,\r\n    \"ft_ins3_timestamp\": 3,\r\n    \"ft_ins3_t1\": 3.0,\r\n    \"ft_ins3_t2\": 3.0,\r\n    \"ft_ins3_ph\": 3.0,\r\n    \"ft_ins3_o2\": 3.0,\r\n    \"ft_ins3_ec\": 3.0,\r\n    \"ft_ins3_ta1\": 3.0,\r\n    \"ft_ins3_ha1\": 3.0,\r\n    \"ft_ins3_ta2\": 3.0,\r\n    \"ft_ins3_ha2\": 3.0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8009/ft_inst3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8009",
+					"path": [
+						"ft_inst3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post fta_1d_inst",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"fta1d_ins3_inst\": 3,\r\n    \"fta1d_ins3_timestamp\": 3,\r\n    \"fta1d_ins3_t1\": 3.3,\r\n    \"fta1d_ins3_t2\": 3.3,\r\n    \"fta1d_ins3_ph\": 3.3,\r\n    \"fta1d_ins3_o2\": 3.3,\r\n    \"fta1d_ins3_ec\": 3.3,\r\n    \"fta1d_ins3_ta1\": 3.3,\r\n    \"fta1d_ins3_ha1\": 3.3,\r\n    \"fta1d_ins3_ta2\": 3.3,\r\n    \"fta1d_ins3_ha2\": 3.3\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8009/fta_inst3/1day",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8009",
+					"path": [
+						"fta_inst3",
+						"1day"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post fta_1h_inst",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"fta1h_ins3_inst\": 3,\r\n    \"fta1h_ins3_timestamp\": 3,\r\n    \"fta1h_ins3_t1\": 3.33,\r\n    \"fta1h_ins3_t2\": 3.33,\r\n    \"fta1h_ins3_ph\": 3.33,\r\n    \"fta1h_ins3_o2\": 3.33,\r\n    \"fta1h_ins3_ec\": 3.33,\r\n    \"fta1h_ins3_ta1\": 3.33,\r\n    \"fta1h_ins3_ha1\": 3.33,\r\n    \"fta1h_ins3_ta2\": 3.33,\r\n    \"fta1h_ins3_ha2\": 3.33\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8009/fta_inst3/1hour",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8009",
+					"path": [
+						"fta_inst3",
+						"1hour"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get TESTS",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwiZXhwIjoxNjgxMjA3MTg2fQ.BBA9pCrkQP6VMHVh9Id48CFCIZYPmdVRovWYuuvPe7Q",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8009/fta_inst2/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8009",
+					"path": [
+						"fta_inst2",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
