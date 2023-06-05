@@ -9,21 +9,16 @@ services:
       - POSTGRES_USER=postgres
       - POSTGRES_DB=AquacolData
     ports:
-      - 5434:5432
+      - "5434:5432"
 
   app:
-    build: .
-    volumes:
-      - .:/app
+    build: ./app
     environment:
       - POSTGRES_PASSWORD=docker
       - POSTGRES_USER=postgres
       - POSTGRES_DB=AquacolData
-      - POSTGRES_HOST=aquacoldocker-db-1
-      - POSTGRES_PORT=5432
-      - TOKEN_EXP_TIME=10
     ports:
-      - 8009:8009
+      - "8009:8009"
     depends_on:
       - db
 

@@ -6,7 +6,7 @@ from app.dependencies import *
 import configparser
 
 config = configparser.RawConfigParser()
-config.read('config.properties')
+config.read('app/config.properties')
 token_username = config.get('Credentials', 'token_username')
 token_password = config.get('Credentials', 'token_password')
 

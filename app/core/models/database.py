@@ -9,8 +9,8 @@ POSTGRES_DB = os.environ.get("POSTGRES_DB")
 POSTGRES_HOST = os.environ.get("POSTGRES_HOST")
 POSTGRES_PORT = os.environ.get("POSTGRES_PORT")
 
-# SQLALCHEMY_DATABASE_URL = f"postgresql://{POSTGRES_USER}:{POSTGRES_PASSWORD}@db/{POSTGRES_DB}"
-SQLALCHEMY_DATABASE_URL = "postgresql://postgres:docker@localhost:5434/AquacolData"
+SQLALCHEMY_DATABASE_URL = f"postgresql://{POSTGRES_USER}:{POSTGRES_PASSWORD}@db/{POSTGRES_DB}"
+# SQLALCHEMY_DATABASE_URL = "postgresql://postgres:docker@localhost:5434/AquacolData"
 
 engine = create_engine(SQLALCHEMY_DATABASE_URL)
 

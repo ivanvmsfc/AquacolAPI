@@ -6,7 +6,7 @@ import configparser
 import os
 
 config = configparser.RawConfigParser()
-config.read('config.properties')
+config.read('app/config.properties')
 
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="auth/token")
 
