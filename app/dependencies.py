@@ -2,10 +2,13 @@ from fastapi import Depends, HTTPException
 from fastapi.security import OAuth2PasswordBearer
 from app.core.models.database import SessionLocal
 import jwt
+import configparser
 import os
 
-oauth2_scheme = OAuth2PasswordBearer(tokenUrl="auth/token")
+config = configparser.RawConfigParser()
+config.read('config.properties')
 
+oauth2_scheme = OAuth2PasswordBearer(tokenUrl="auth/token")
 
 def get_db():
     db = SessionLocal()
@@ -14,12 +17,9 @@ def get_db():
     finally:
         db.close()
 
-# Clave secreta para la firma del token
-SECRET_KEY = "mysecretkey"
-
-# Tiempo de expiración del token
-ALGORITHM = "HS256"
-ACCESS_TOKEN_EXPIRE_MINUTES = int(os.environ.get("TOKEN_EXP_TIME"))
+SECRET_KEY = config.get('Credentials', 'SECRET_KEY')
+ALGORITHM = config.get('Credentials', 'ALGORITHM')
+ACCESS_TOKEN_EXPIRE_MINUTES = int(config.get('Credentials', 'ACCESS_TOKEN_EXPIRE_MINUTES'))
 
 # Dependencia para verificar el token
 async def get_current_user(token: str = Depends(oauth2_scheme)):

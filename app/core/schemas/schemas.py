@@ -22,163 +22,62 @@ class InstCreate(BaseModel):
         orm_mode = True
 
 
-class FtInst1Create(BaseModel):
+class FtInstCreate(BaseModel):
 
-    ft_ins1_inst: int
-    ft_ins1_timestamp: int
-    ft_ins1_t1: float
-    ft_ins1_t2: float
-    ft_ins1_ph: float
-    ft_ins1_o2: float
-    ft_ins1_ec: float
-    ft_ins1_ta1: float
-    ft_ins1_ha1: float
-    ft_ins1_ta2: float
-    ft_ins1_ha2: float
-
-    class Config:
-        orm_mode = True
-
-
-class FtInst2Create(BaseModel):
-
-    ft_ins2_inst: int
-    ft_ins2_timestamp: int
-    ft_ins2_t1: float
-    ft_ins2_t2: float
-    ft_ins2_ph: float
-    ft_ins2_o2: float
-    ft_ins2_ec: float
-    ft_ins2_ta1: float
-    ft_ins2_ha1: float
-    ft_ins2_ta2: float
-    ft_ins2_ha2: float
+    ft_ins_inst: int
+    ft_ins_timestamp: int
+    ft_ins_t1: float
+    ft_ins_t2: float
+    ft_ins_ph: float
+    ft_ins_o2: float
+    ft_ins_ec: float
+    ft_ins_ta1: float
+    ft_ins_ha1: float
+    ft_ins_ta2: float
+    ft_ins_ha2: float
+    ft_ins_ns: float
+    ft_ins_ni: float
 
     class Config:
         orm_mode = True
 
 
-class FtInst3Create(BaseModel):
+class Fta_1dayInstCreate(BaseModel):
 
-    ft_ins3_inst: int
-    ft_ins3_timestamp: int
-    ft_ins3_t1: float
-    ft_ins3_t2: float
-    ft_ins3_ph: float
-    ft_ins3_o2: float
-    ft_ins3_ec: float
-    ft_ins3_ta1: float
-    ft_ins3_ha1: float
-    ft_ins3_ta2: float
-    ft_ins3_ha2: float
-
-    class Config:
-        orm_mode = True
-
-
-class Fta_1dayInst1Create(BaseModel):
-
-    fta1d_ins1_inst: int
-    fta1d_ins1_timestamp: int
-    fta1d_ins1_t1: float
-    fta1d_ins1_t2: float
-    fta1d_ins1_ph: float
-    fta1d_ins1_o2: float
-    fta1d_ins1_ec: float
-    fta1d_ins1_ta1: float
-    fta1d_ins1_ha1: float
-    fta1d_ins1_ta2: float
-    fta1d_ins1_ha2: float
+    fta1d_ins_inst: int
+    fta1d_ins_timestamp: int
+    fta1d_ins_t1: float
+    fta1d_ins_t2: float
+    fta1d_ins_ph: float
+    fta1d_ins_o2: float
+    fta1d_ins_ec: float
+    fta1d_ins_ta1: float
+    fta1d_ins_ha1: float
+    fta1d_ins_ta2: float
+    fta1d_ins_ha2: float
+    fta1d_ins_ns: float
+    fta1d_ins_ni: float
 
     class Config:
         orm_mode = True
 
 
-class Fta_1hourInst1Create(BaseModel):
+class Fta_1hourInstCreate(BaseModel):
 
-    fta1h_ins1_inst: int
-    fta1h_ins1_timestamp: int
-    fta1h_ins1_t1: float
-    fta1h_ins1_t2: float
-    fta1h_ins1_ph: float
-    fta1h_ins1_o2: float
-    fta1h_ins1_ec: float
-    fta1h_ins1_ta1: float
-    fta1h_ins1_ha1: float
-    fta1h_ins1_ta2: float
-    fta1h_ins1_ha2: float
-
-    class Config:
-        orm_mode = True
-
-
-class Fta_1dayInst2Create(BaseModel):
-
-    fta1d_ins2_inst: int
-    fta1d_ins2_timestamp: int
-    fta1d_ins2_t1: float
-    fta1d_ins2_t2: float
-    fta1d_ins2_ph: float
-    fta1d_ins2_o2: float
-    fta1d_ins2_ec: float
-    fta1d_ins2_ta1: float
-    fta1d_ins2_ha1: float
-    fta1d_ins2_ta2: float
-    fta1d_ins2_ha2: float
+    fta1h_ins_inst: int
+    fta1h_ins_timestamp: int
+    fta1h_ins_t1: float
+    fta1h_ins_t2: float
+    fta1h_ins_ph: float
+    fta1h_ins_o2: float
+    fta1h_ins_ec: float
+    fta1h_ins_ta1: float
+    fta1h_ins_ha1: float
+    fta1h_ins_ta2: float
+    fta1h_ins_ha2: float
+    fta1h_ins_ns: float
+    fta1h_ins_ni: float
 
     class Config:
         orm_mode = True
 
-
-class Fta_1hourInst2Create(BaseModel):
-
-    fta1h_ins2_inst: int
-    fta1h_ins2_timestamp: int
-    fta1h_ins2_t1: float
-    fta1h_ins2_t2: float
-    fta1h_ins2_ph: float
-    fta1h_ins2_o2: float
-    fta1h_ins2_ec: float
-    fta1h_ins2_ta1: float
-    fta1h_ins2_ha1: float
-    fta1h_ins2_ta2: float
-    fta1h_ins2_ha2: float
-
-    class Config:
-        orm_mode = True
-
-
-class Fta_1dayInst3Create(BaseModel):
-
-    fta1d_ins3_inst: int
-    fta1d_ins3_timestamp: int
-    fta1d_ins3_t1: float
-    fta1d_ins3_t2: float
-    fta1d_ins3_ph: float
-    fta1d_ins3_o2: float
-    fta1d_ins3_ec: float
-    fta1d_ins3_ta1: float
-    fta1d_ins3_ha1: float
-    fta1d_ins3_ta2: float
-    fta1d_ins3_ha2: float
-
-    class Config:
-        orm_mode = True
-
-
-class Fta_1hourInst3Create(BaseModel):
-
-    fta1h_ins3_inst: int
-    fta1h_ins3_timestamp: int
-    fta1h_ins3_t1: float
-    fta1h_ins3_t2: float
-    fta1h_ins3_ph: float
-    fta1h_ins3_o2: float
-    fta1h_ins3_ec: float
-    fta1h_ins3_ta1: float
-    fta1h_ins3_ha1: float
-    fta1h_ins3_ta2: float
-    fta1h_ins3_ha2: float
-
-    class Config:
-        orm_mode = True
